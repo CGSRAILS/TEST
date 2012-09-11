@@ -10,6 +10,7 @@ Lajuanita::Application.routes.draw do
   get "home/imagenes"
   get "home/facebook"
   get "home/mail"
+   get "home/luz" 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
