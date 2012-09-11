@@ -18,5 +18,11 @@ class HomeController < ApplicationController
   def imagenes
       render 
   end
+  def facebook
+      redirect_to "http://www.facebook.com" 
+  end
+  def mail
+      redirect_to "http://www.hotmail.com" 
+  end
 
 end
