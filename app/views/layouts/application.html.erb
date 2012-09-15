@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>Lajuanita</title>
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <script src="/audiojs/audio.min.js"></script>
   <%= csrf_meta_tags %>
-
-  <%= render 'layouts/shim' %> 
-  <%= render 'layouts/jq' %> 
-
 </head>
-<body>
+<body bgcolor="000000" >
 
 <script>
   audiojs.events.ready(function() {
@@ -21,25 +15,62 @@
   });
 </script>
 
-<div align="center" style="position:absolute;left:650px; top:860px; z-index:2">
- <br/><br/>
-   <div id="menu">
-       <ul>
-            <li class="selected0"><a href="#"><img src="/assets/BOTON.png" onmouseover="this.src='/assets/BOTONON.png';" onmouseout="this.src='/assets/BOTON.png';" width="50" height="50" alt="HISTORIA" title="" /></a></li>
-            <li class="selected1"><a href="#"><img src="/assets/BOTON.png" onmouseover="this.src='/assets/BOTONON.png';" onmouseout="this.src='/assets/BOTON.png';" width="50" height="50" alt="INFORMACION" title=""/></a></li>
-            <li class="selected"><a href="#"><img src="/assets/BOTON.png"  onmouseover="this.src='/assets/BOTONON.png';" onmouseout="this.src='/assets/BOTON.png';" width="50" height="50" alt="CASA" title=""/></a></li>
-            <li class="selected3"><a href="#"><img src="/assets/BOTON.png" onmouseover="this.src='/assets/BOTONON.png';" onmouseout="this.src='/assets/BOTON.png';" width="50" height="50" alt="MULTIMEDIA" title=""/></a></li>
-            <li class="selected4"><a href="#"><img src="/assets/BOTON.png" onmouseover="this.src='/assets/BOTONON.png';" onmouseout="this.src='/assets/BOTON.png';" width="50" height="50" alt="IMAGENES" title=""/></a></li>
-        </ul>
-     <div id="box"><div class="head"></div></div>
-   </div>
+
+<div align="center" style="position:absolute; overflow:hidden; left:0px; top:0px; visibility:visible;z-index:1">
+    <b>
+       <img src="/images/INDEXx.jpg">
+    </b>
 </div>
 
+<form action="/home/historia" >
+    <div align="center" style="position:absolute; overflow:hidden; left:700px; top:880px; visibility:visible;z-index:2">
+        <b>
+           <%= image_submit_tag "BOTON.png", :name => "historia",
+              :onmouseover => "this.src='/assets/BOTONON.png'", 
+              :onmouseout => "this.src='/assets/BOTON.png'"%>
+        </b>
+    </div>
+</form >
+<form action="/home/informacion" >
+    <div align="center" style="position:absolute; overflow:hidden; left:800px; top:880px; visibility:visible;z-index:2">
+        <b>
+           <%= image_submit_tag "BOTON.png", :name => "informacion",
+              :onmouseover => "this.src='/assets/BOTONON.png'", 
+              :onmouseout => "this.src='/assets/BOTON.png'"%>
+        </b>
+    </div>
+</form >
+<form action="/home/casa" >
+    <div align="center" style="position:absolute; overflow:hidden; left:900px; top:880px; visibility:visible;z-index:2">
+        <b>
+           <%= image_submit_tag "BOTON.png", :name => "casa",
+              :onmouseover => "this.src='/assets/BOTONON.png'", 
+              :onmouseout => "this.src='/assets/BOTON.png'"%>
+        </b>
+    </div>
+</form >
+<form action="/home/multimedia" >
+    <div align="center" style="position:absolute; overflow:hidden; left:1000px; top:880px; visibility:visible;z-index:2">
+        <b>
+           <%= image_submit_tag "BOTON.png", :name => "multimedia",
+              :onmouseover => "this.src='/assets/BOTONON.png'", 
+              :onmouseout => "this.src='/assets/BOTON.png'"%>
+        </b>
+    </div>
+</form >
+<form action="/home/imagenes" >
+    <div align="center" style="position:absolute; overflow:hidden; left:1100px; top:880px; visibility:visible;z-index:2">
+        <b>
+           <%= image_submit_tag "BOTON.png", :name => "images",
+              :onmouseover => "this.src='/assets/BOTONON.png'", 
+              :onmouseout => "this.src='/assets/BOTON.png'"%>
+        </b>
+    </div>
 </form >
 <form action="/home/facebook" >
     <div align="center" style="position:absolute; overflow:hidden; left:1800px; top:906px; visibility:visible;z-index:2">
         <b>
-           <%= image_submit_tag "FACEBOOK.png", :id => "FACE",
+           <%= image_submit_tag "FACEBOOK.png", :name => "facebook",
               :onmouseover => "this.src='/assets/FACEBOOKON.png'", 
               :onmouseout => "this.src='/assets/FACEBOOK.png'"%>
         </b>
@@ -48,7 +79,7 @@
 <form action="/home/mail" >
     <div align="center" style="position:absolute; overflow:hidden; left:1760px; top:908px; visibility:visible;z-index:2">
         <b>
-           <%= image_submit_tag "MAIL.png", :id => "MAI",
+           <%= image_submit_tag "MAIL.png", :name => "mail",
               :onmouseover => "this.src='/assets/MAILON.png'", 
               :onmouseout => "this.src='/assets/MAIL.png'"%>
         </b>
@@ -57,6 +88,7 @@
 
 <%= yield %>
 
+
+
 </body>
 </html>
-

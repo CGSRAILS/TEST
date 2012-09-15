@@ -9,12 +9,6 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-
-
-//= require jquery.easing.1.3.js
-//= require script.js
-//= require jquery.shuffleLetters.js
-//= require slides.min.jquery.js
 //= require audiojs
 //= require jquery
 //= require jquery_ujs
