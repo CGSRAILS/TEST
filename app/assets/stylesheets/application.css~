@@ -11,4 +11,4 @@
  *= require_self
  *= require_tree .
  */
-
+padding-top: 1px

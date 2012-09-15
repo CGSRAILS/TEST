@@ -24,8 +24,6 @@ class HomeController < ApplicationController
   def mail
       redirect_to "http://www.hotmail.com" 
   end
-  def luz
-      render 
-  end
+
 
 end
